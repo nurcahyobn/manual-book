@@ -1,0 +1,111 @@
+---
+title: "Kerja Praktik / PKL"
+description: "Mengelola pendaftaran, proposal, dan laporan kegiatan kerja praktik mahasiswa."
+---
+
+<Note>
+  Pastikan dokumen proposal sudah disetujui dosen pembimbing sebelum mengajukan lokasi PKL.
+</Note>
+
+
+## Pendaftaran Kerja Praktik
+
+Mahasiswa yang menjadi **pengusul utama** dapat melakukan pendaftaran melalui menu:
+
+> **menu → Kerja Praktik**
+
+### 🔧 Formulir Pendaftaran
+
+<Frame>
+   ![](/images/mahasiswa/pengajuan-kerja-praktik-01.png)
+</Frame>
+
+Isi data berikut dengan lengkap:
+
+| Field | Keterangan |
+|-------|-------------|
+| **Nama Perusahaan** | Nama instansi tempat kerja praktik dilakukan. |
+| **Alamat Perusahaan** | Lokasi perusahaan (lengkap). |
+| **Undang Anggota** | Tambahkan maksimal 4 teman mahasiswa dengan NIM mereka. |
+
+Setelah dikirim, status awal akan menjadi:
+
+
+<Frame>
+   ![](/images/mahasiswa/pengajuan-kerja-praktik-02.png)
+</Frame>
+
+```bash
+Status: pending
+````
+
+Mahasiswa yang diundang akan menerima notifikasi untuk menerima atau menolak undangan.
+
+##  Undangan Anggota
+
+Mahasiswa yang diundang akan melihat notifikasi di dashboard:
+
+> *“Anda diundang sebagai anggota Kerja Praktik oleh [Nama Pengusul] di [Nama Perusahaan].”*
+
+
+<Frame>
+   ![](/images/mahasiswa/pengajuan-kerja-praktik-03.png)
+</Frame>
+
+Mereka memiliki dua opsi:
+
+| Tindakan              | Dampak                                   |
+| --------------------- | ---------------------------------------- |
+| ✅ **Terima (Accept)** | Status anggota berubah menjadi `accept`. |
+| ❌ **Tolak (Reject)**  | Status anggota berubah menjadi `reject`. |
+
+Contoh tampilan tabel:
+
+| Mahasiswa        | Perusahaan                     | Sebagai  | Status     |
+| ---------------- | ------------------------------ | -------- | ---------- |
+| Alex Media Putra | PT. Nusantara Teknologi Solusi | pengusul | ✅ accept   |
+| Rizky Maulana    | PT. Nusantara Teknologi Solusi | anggota  | 🕓 pending |
+
+---
+
+## Persetujuan Kelompok KP
+
+Jika **semua anggota sudah accept**, maka kelompok akan otomatis disetujui oleh sistem dengan status:
+
+```bash
+Status: approved
+```
+
+Prodi akan menerima data kelompok KP yang sudah disetujui dan dapat memverifikasi untuk penerbitan **Surat Pengantar KP**.
+
+
+<Frame>
+   ![](/images/mahasiswa/pengajuan-kerja-praktik-04.png)
+</Frame>
+
+
+## Pengambilan Surat Pengantar
+
+Setelah disetujui oleh Prodi, mahasiswa dapat melihat catatan seperti berikut pada halaman status:
+
+> *“Surat pengantar sudah dapat diambil di Prodi mulai Senin, pukul 06.00 WIB.”*
+
+Kolom `note` akan berisi informasi tambahan dari pihak Prodi jika ada perubahan jadwal atau berkas tambahan yang harus dilengkapi.
+
+## Catatan Penting
+
+* Mahasiswa **hanya dapat menjadi pengusul di satu KP aktif**.
+* Jika semua anggota menolak undangan, pengajuan akan **otomatis dibatalkan**.
+* Surat pengantar hanya bisa dicetak setelah status `approved`.
+* Setiap perubahan status (accept/reject/approved) akan **mencatat log aktivitas** di sistem.
+
+
+## Status dan Tampilan
+
+| Status     | Keterangan                  |
+| ---------- | --------------------------- |
+| `pending`  | Menunggu konfirmasi anggota |
+| `accept`   | Diterima                    |
+| `reject`   | Ditolak                     |
+| `approved` | Siap cetak surat pengantar  |
+
